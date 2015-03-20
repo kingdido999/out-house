@@ -5,6 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
+var query = require('./routes/query.js');
 
 var app = module.exports = express.createServer();
 
@@ -28,11 +29,7 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
-
-// Actions
-app.post('/search', function(req, res) {
-  res.render('search', { title: 'Search Results' });
-});
+app.get('/query', query.search);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

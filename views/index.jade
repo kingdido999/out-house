@@ -1,7 +1,7 @@
 .container
     h1= title
 
-    form(action='/search', method='post')
+    form(action='/query', method='get')
         .form-group.address
             label Find bathroom near
             input.form-control.start-address(type='text', placeholder='Enter address')
