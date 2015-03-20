@@ -3,13 +3,12 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes');
+var express = require('express');
+var routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
 // Configuration
-
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
@@ -28,8 +27,12 @@ app.configure('production', function(){
 });
 
 // Routes
-
 app.get('/', routes.index);
+
+// Actions
+app.post('/search', function(req, res) {
+  res.render('search', { title: 'Search Results' });
+});
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
