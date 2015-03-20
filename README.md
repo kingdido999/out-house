@@ -2,17 +2,25 @@
 
 ## Installation
 
+First, make sure you have [node](https://nodejs.org/) installed.
+
+Then clone the project:
+
 `git clone https://github.com/kingdido999/out-house`
 
 `cd out-house`
+
+Install all node packages we need (it reads dependencies from `package.json`):
 
 `npm install`
 
 `npm install -g nodemon` (automatically detect file changes)
 
-`modemon app.js`
+Running node server via nodemon:
 
-Then you should see something like this:
+`nodemon app.js`
+
+You should see something like this:
 
 ```
 19 Mar 21:33:12 - [nodemon] v1.3.7
