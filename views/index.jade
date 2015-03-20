@@ -1,13 +1,12 @@
-h1= title
-p Welcome to #{title}
+.container-fluid
+    h1= title
 
-.main
     form(action='/search', method='post')
-        .address
-            | Find bathroom near:&nbsp;
-            input.start-address
-        .radius
-            | Search range:&nbsp;
-            input.search-radius
-        .submit
-            input(type='submit', value='Search').submit-button
+        .form-group.address
+            label Find bathroom near
+            input.form-control.start-address(type='text', placeholder='Enter address')
+        .form-group.radius
+            label Search range
+            input.form-control.search-radius(type='number', placeholder='Default value...')
+        .form-group.submit
+            input.form-control.btn.btn-primary.submit-button(type='submit', value='Search')
