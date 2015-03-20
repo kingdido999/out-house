@@ -1,2 +1,13 @@
 h1= title
 p Welcome to #{title}
+
+.main
+    form(action='/search', method='post')
+        .address
+            | Find bathroom near:&nbsp;
+            input.start-address
+        .radius
+            | Search range:&nbsp;
+            input.search-radius
+        .submit
+            input(type='submit', value='Search').submit-button
