@@ -14,6 +14,8 @@ var infowindow;
 
 function initialize() {
     geocoder = new google.maps.Geocoder();
+
+    // get address and radius values from corresponding html elements
     var address = document.getElementById('address').innerHTML;
     var radius = document.getElementById('radius').innerHTML;
 
@@ -22,6 +24,7 @@ function initialize() {
         if (status == google.maps.GeocoderStatus.OK) {
             var geoCodedLocation = results[0].geometry.location;
 
+            // place google map into #map-canvas
             map = new google.maps.Map(document.getElementById('map-canvas'), {
                 center: geoCodedLocation,
                 zoom: 15
