@@ -1,13 +1,20 @@
+/*
+ * Modified based on the following examples:
+ * Place searches: https://developers.google.com/maps/documentation/javascript/examples/place-search
+ * Geocoding service: https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
+ */
+
 var geocoder;
 var map;
 var infowindow;
-var API_KEY = 'AIzaSyBDbsT9AqrUebFtJSVXFHTA6JtX6viD8JE';
+// var API_KEY = 'AIzaSyBDbsT9AqrUebFtJSVXFHTA6JtX6viD8JE';
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
   var address = document.getElementById('address').innerHTML;
   var radius = document.getElementById('radius').innerHTML;
 
+  // get geocoded location for the address
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       var geoCodedLocation = results[0].geometry.location;

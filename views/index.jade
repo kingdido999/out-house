@@ -4,9 +4,9 @@
     form(action='/submit', method='post')
         .form-group.address
             label Find bathroom near
-            input.form-control.start-address(type='text', name='startAddress', placeholder='Enter address')
+            input.form-control.start-address(type='text', name='startAddress', placeholder='Enter address', required)
         .form-group.radius
             label Search range
-            input.form-control.search-radius(type='number', name='searchRadius', placeholder='Default value...')
+            input.form-control.search-radius(type='number', name='searchRadius', value='500')
         .form-group.submit
             input.form-control.btn.btn-primary.submit-button(type='submit', value='Search')
