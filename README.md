@@ -34,6 +34,16 @@ Open your web browser, type in address `localhost:3000`
 
 Now you have our project running!
 
+## Todo
+
+- [x] form submit
+- [x] address geocoding
+- [x] display places using address and radius
+- [ ] use correct place types for searching
+- [ ] choose from one of the bathrooms as destination
+- [ ] choose transportation method
+- [ ] get directions
+
 ## Notes
 
 We'll use **Node + Express + Bootstrap** to build our project.
