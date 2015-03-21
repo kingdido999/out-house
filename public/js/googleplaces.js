@@ -1,23 +1,36 @@
+var geocoder;
 var map;
 var infowindow;
 var API_KEY = 'AIzaSyBDbsT9AqrUebFtJSVXFHTA6JtX6viD8JE';
 
 function initialize() {
-  var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
+  geocoder = new google.maps.Geocoder();
+  var address = document.getElementById('address').innerHTML;
+  var radius = document.getElementById('radius').innerHTML;
 
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: pyrmont,
-    zoom: 15
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var geoCodedLocation = results[0].geometry.location;
+
+      map = new google.maps.Map(document.getElementById('map-canvas'), {
+        center: geoCodedLocation,
+        zoom: 15
+      });
+
+      var request = {
+        location: geoCodedLocation,
+        radius: radius,
+        types: ['store']
+      };
+
+      infowindow = new google.maps.InfoWindow();
+      var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
   });
-
-  var request = {
-    location: pyrmont,
-    radius: 500,
-    types: ['store']
-  };
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
 }
 
 function callback(results, status) {
