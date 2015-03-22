@@ -7,13 +7,13 @@ a {
     color: #00B7FF;
 }
 
-/*
- * Search.jade
- */
-
 .row {
     margin: 20px 0;
 }
+
+/*
+ * query.jade
+ */
 
 .search-param div {
     display: inline-block;
