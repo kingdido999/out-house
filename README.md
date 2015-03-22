@@ -76,3 +76,7 @@ If you want to (and you should!) learn more about Git, check them out:
 
 - http://rogerdudler.github.io/git-guide/
 - https://www.atlassian.com/git/tutorials/
+
+#### Google Maps API
+
+- [supported place types](https://developers.google.com/places/supported_types)
