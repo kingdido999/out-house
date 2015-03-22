@@ -9,7 +9,7 @@ exports.search = function(req, res){
     var searchRadius = req.body.searchRadius;
 
     // pass data to the view
-    res.render('search', {
+    res.render('query', {
         title: 'Out House',
         address: startAddress,
         radius: searchRadius
