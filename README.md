@@ -80,3 +80,4 @@ If you want to (and you should!) learn more about Git, check them out:
 #### Google Maps API
 
 - [supported place types](https://developers.google.com/places/supported_types)
+- [directions api](https://developers.google.com/maps/documentation/directions/)
