@@ -1,11 +1,16 @@
 .container
-    label Bathroom near
-    #address= address
+    .row
+        .col-md-6
+            .search-param
+                label Bathroom near
+                #address= address
+        .col-md-6
+            .search-param
+                label Radius
+                #radius= radius
 
-    label Radius
-    #radius= radius
-
-    #map-canvas
+    .row
+        #map-canvas
 
 script(src="https://maps.googleapis.com/maps/api/js?libraries=places")
-script(src="/js/googleplaces.js")
+script(src="/js/googlemaps.js")

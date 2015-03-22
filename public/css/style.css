@@ -7,6 +7,21 @@ a {
     color: #00B7FF;
 }
 
+/*
+ * Search.jade
+ */
+
+.row {
+    margin: 20px 0;
+}
+
+.search-param div {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+
 #map-canvas {
-    height: 500px;
+    height: 600px;
 }
