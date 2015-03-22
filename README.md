@@ -14,9 +14,11 @@ Install all node packages we need (it reads dependencies from `package.json`):
 
 `npm install`
 
-`npm install -g nodemon` (automatically detect file changes)
+`npm install -g nodemon` (nodemon automatically detect file changes so that you don't have to restart the server each time you modify a file, -g means install this package globally)
 
-Running node server via nodemon:
+Try `sudo npm install -g nodemon` if you were asked to run this command as root/Administrator.
+
+Run node server via nodemon:
 
 `nodemon app.js`
 
