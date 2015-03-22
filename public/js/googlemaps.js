@@ -33,7 +33,7 @@ function initialize() {
             var request = {
                 location: geoCodedLocation,
                 radius: radius,
-                types: ['store']
+                types: ['restaurant', 'shopping_mall']
             };
 
             infowindow = new google.maps.InfoWindow();

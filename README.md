@@ -44,6 +44,7 @@ Now you have our project running!
 - [ ] choose from one of the bathrooms as destination
 - [ ] choose transportation method
 - [ ] get directions
+- [ ] address autocomplete
 
 ## Notes
 
