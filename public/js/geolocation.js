@@ -8,11 +8,8 @@ function initialize() {
     // Try HTML5 geolocation
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            // get current location
-            var pos = new google.maps.LatLng(
-                position.coords.latitude,
-                position.coords.longitude
-            );
+            // connect position coordinates
+            var pos = position.coords.latitude + ', ' + position.coords.longitude;
 
             // get address input element
             var address = document.getElementsByClassName('start-address')[0];
@@ -37,4 +34,4 @@ function handleNoGeolocation(errorFlag) {
     }
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+window.onload = initialize;
