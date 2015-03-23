@@ -8,12 +8,16 @@
  *
  * Directions service:
  * https://developers.google.com/maps/documentation/javascript/examples/directions-simple
+ *
+ * Circles:
+ * https://developers.google.com/maps/documentation/javascript/examples/circle-simple
  */
 
+var map;
 var geocoder;
 var geoOrigin; // geocoded location for origin address
-var map;
 var infowindow; // popup window for each marker
+var radiusCircle;
 // var API_KEY = 'AIzaSyBDbsT9AqrUebFtJSVXFHTA6JtX6viD8JE';
 
 
@@ -35,7 +39,11 @@ function initialize() {
                 zoom: 15
             });
 
+            // special marker for origin
             createOriginMarker(geoOrigin);
+
+            // draw a circle around the origin
+            createCircle(geoOrigin, radius);
 
             var request = {
                 location: geoOrigin,
@@ -92,6 +100,21 @@ function createOriginMarker(origin) {
         position: origin,
         icon: '/img/origin.png'
     });
+}
+
+function createCircle(location, radius) {
+    var populationOptions = {
+        strokeColor: '#0000FF',
+        strokeOpacity: 0.6,
+        strokeWeight: 1,
+        fillColor: '#0000FF',
+        fillOpacity: 0.1,
+        map: map,
+        center: location,
+        radius: parseInt(radius, 10)
+    };
+
+    circle = new google.maps.Circle(populationOptions);
 }
 
 function getDirections() {
