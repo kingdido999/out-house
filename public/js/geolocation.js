@@ -9,7 +9,7 @@ function initialize() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             // connect position coordinates
-            var pos = position.coords.latitude + ', ' + position.coords.longitude;
+            var pos = position.coords.latitude + ',' + position.coords.longitude;
 
             // get address input element
             var address = document.getElementsByClassName('start-address')[0];

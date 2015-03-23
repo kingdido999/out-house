@@ -20,6 +20,10 @@ a {
     margin-left: 20px;
 }
 
-#map-canvas {
-    height: 600px;
+#map-canvas, #map-directions {
+    height: 400px;
+}
+
+.place-coords {
+    visibility: hidden;
 }

@@ -5,12 +5,17 @@
  *
  * Geocoding service:
  * https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
+ *
+ * Directions service:
+ * https://developers.google.com/maps/documentation/javascript/examples/directions-simple
  */
 
 var geocoder;
+var geoOrigin; // geocoded location for origin address
 var map;
-var infowindow;
+var infowindow; // popup window for each marker
 // var API_KEY = 'AIzaSyBDbsT9AqrUebFtJSVXFHTA6JtX6viD8JE';
+
 
 function initialize() {
     geocoder = new google.maps.Geocoder();
@@ -22,16 +27,18 @@ function initialize() {
     // get geocoded location for the address
     geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            var geoCodedLocation = results[0].geometry.location;
+            geoOrigin = results[0].geometry.location;
 
             // place google map into #map-canvas
             map = new google.maps.Map(document.getElementById('map-canvas'), {
-                center: geoCodedLocation,
+                center: geoOrigin,
                 zoom: 15
             });
 
+            createOriginMarker(geoOrigin);
+
             var request = {
-                location: geoCodedLocation,
+                location: geoOrigin,
                 radius: radius,
                 types: ['restaurant', 'shopping_mall']
             };
@@ -39,7 +46,6 @@ function initialize() {
             infowindow = new google.maps.InfoWindow();
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch(request, callback);
-
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -62,8 +68,57 @@ function createMarker(place) {
     });
 
     google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
+        // set #destination value
+        document.getElementById('destination').innerHTML = placeLoc.k + ',' + placeLoc.D;
+
+        // button to set destination
+        var btnSetDestination =
+            '<div class="set-destination">' +
+            '<input type="button"' +
+            'class="btn-set-destination btn btn-primary btn-xs"' +
+            'value="Set as destination"' +
+            'onclick="getDirections()">' +
+            '</div>';
+
+        var content = place.name + btnSetDestination;
+        infowindow.setContent(content);
         infowindow.open(map, this);
+    });
+}
+
+function createOriginMarker(origin) {
+    var marker = new google.maps.Marker({
+        map: map,
+        position: origin,
+        icon: '/img/origin.png'
+    });
+}
+
+function getDirections() {
+    var start = geoOrigin;
+    var end = document.getElementById('destination').innerHTML;
+    var transportation = google.maps.TravelMode.WALKING;
+
+    // initialize direction services
+    var directionsMap = new google.maps.Map(document.getElementById('map-directions'), {
+        center: start,
+        zoom: 15
+    });
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var directionsService = new google.maps.DirectionsService();
+
+    directionsDisplay.setMap(directionsMap);
+
+    var request = {
+        origin: start,
+        destination: end,
+        travelMode: transportation
+    };
+
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
     });
 }
 

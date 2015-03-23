@@ -3,17 +3,26 @@
         a(href='/')= title
 
     .row
-        .col-md-6
+        .col-md-4
             .search-param
                 label Bathroom near
                 #address= address
-        .col-md-6
+        .col-md-4
+            .search-param
+                label Destination
+                #destination unknown
+        .col-md-4
             .search-param
                 label Radius
                 #radius= radius
 
     .row
+        label Bathrooms
         #map-canvas
+
+    .row
+        label Directions
+        #map-directions
 
 script(src="https://maps.googleapis.com/maps/api/js?libraries=places")
 script(src="/js/googlemaps.js")
