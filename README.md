@@ -41,11 +41,11 @@ Now you have our project running!
 - [x] form submit
 - [x] address geocoding
 - [x] display places using address and radius
-- [ ] support gps location
+- [x] support gps location
 - [ ] use correct place types for searching
-- [ ] choose from one of the bathrooms as destination
+- [x] choose from one of the bathrooms as destination
 - [ ] choose transportation method
-- [ ] get directions
+- [x] get directions
 - [ ] address autocomplete
 
 ## Notes
