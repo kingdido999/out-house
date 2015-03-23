@@ -134,6 +134,8 @@ function getDirections() {
     var directionsService = new google.maps.DirectionsService();
 
     directionsDisplay.setMap(directionsMap);
+    
+    clearDirectionsPanel();
     directionsDisplay.setPanel(document.getElementById('directions-panel'));
 
     var request = {
@@ -147,6 +149,10 @@ function getDirections() {
             directionsDisplay.setDirections(response);
         }
     });
+}
+
+function clearDirectionsPanel() {
+    document.getElementById("directions-panel").innerHTML = "";
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
