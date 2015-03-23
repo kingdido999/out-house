@@ -19,6 +19,10 @@ a {
     height: 400px;
 }
 
+.directions-panel {
+	margin-top: 40px;
+}
+
 .set-destination {
 	margin-top: 5px;
 }

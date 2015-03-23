@@ -27,9 +27,13 @@
             #map-canvas
 
     .row
-        .map
-            label Directions
-            #map-directions
+        .col-md-6
+            .map
+                label Directions
+                #map-directions
+        .col-md-6
+            .directions-panel
+                #directions-panel
 
 script(src="https://maps.googleapis.com/maps/api/js?libraries=places")
 script(src="/js/googlemaps.js")
