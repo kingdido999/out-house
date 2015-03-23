@@ -7,23 +7,18 @@ a {
     color: #00B7FF;
 }
 
-.row {
-    margin: 20px 0;
-}
-
 /*
  * query.jade
  */
 
-.search-param div {
-    display: inline-block;
-    margin-left: 20px;
+.map {
+	margin-top: 20px;
 }
 
 #map-canvas, #map-directions {
     height: 400px;
 }
 
-.place-coords {
-    visibility: hidden;
+.set-destination {
+	margin-top: 5px;
 }

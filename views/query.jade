@@ -4,25 +4,32 @@
 
     .row
         .col-md-4
+            label Origin
+        .col-md-4
+            label Destination
+        .col-md-4
+            label Radius
+
+    .row
+        .col-md-4
             .search-param
-                label Bathroom near
                 #address= address
         .col-md-4
             .search-param
-                label Destination
-                #destination unknown
+                #destination N/A
         .col-md-4
             .search-param
-                label Radius
                 #radius= radius
 
     .row
-        label Bathrooms
-        #map-canvas
+        .map
+            label Bathrooms
+            #map-canvas
 
     .row
-        label Directions
-        #map-directions
+        .map
+            label Directions
+            #map-directions
 
 script(src="https://maps.googleapis.com/maps/api/js?libraries=places")
 script(src="/js/googlemaps.js")
