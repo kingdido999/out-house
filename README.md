@@ -15,7 +15,8 @@
 - [ ] choose miles or kilometers for radius
 - [ ] choose transportation method
 - [ ] start address autocomplete
-- [ ] create a login page (username, password, gender, address, etc.)
+- [ ] create a signup page (username, password, gender, address, etc.)
+- [ ] create a login page (Desmond)
 - [ ] MongoDB (Desmond)
 - [ ] store user information in database (Desmond)
 
