@@ -11,6 +11,9 @@
  *
  * Circles:
  * https://developers.google.com/maps/documentation/javascript/examples/circle-simple
+ * 
+ * Text Directions:
+ * https://developers.google.com/maps/documentation/javascript/examples/directions-panel
  */
 
 var map;
@@ -131,6 +134,9 @@ function getDirections() {
     var directionsService = new google.maps.DirectionsService();
 
     directionsDisplay.setMap(directionsMap);
+    
+    clearDirectionsPanel();
+    directionsDisplay.setPanel(document.getElementById('directions-panel'));
 
     var request = {
         origin: start,
@@ -143,6 +149,10 @@ function getDirections() {
             directionsDisplay.setDirections(response);
         }
     });
+}
+
+function clearDirectionsPanel() {
+    document.getElementById("directions-panel").innerHTML = "";
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
