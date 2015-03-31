@@ -1,5 +1,28 @@
 # Out House
 
+## Todo
+
+#### Finished
+- [x] form submit
+- [x] address geocoding
+- [x] display places using address and radius
+- [x] support gps location
+- [x] use appropriate place types for searching
+- [x] choose from one of the bathrooms as destination
+- [x] get directions
+
+#### Current
+- [ ] choose miles or kilometers for radius
+- [ ] choose transportation method
+- [ ] start address autocomplete
+- [ ] create a login page (username, password, gender, address, etc.)
+- [ ] MongoDB (Desmond)
+- [ ] store user information in database (Desmond)
+
+#### Later
+- [ ] allow logged-in user to rate the bathroom
+- [ ] store bathroom ratings in database
+
 ## Installation
 
 First, make sure you have [git](http://git-scm.com/downloads) and [node](https://nodejs.org/) installed.
@@ -35,18 +58,6 @@ Express server listening on port 3000 in development mode
 Open your web browser, type in address `localhost:3000`
 
 Now you have our project running!
-
-## Todo
-
-- [x] form submit
-- [x] address geocoding
-- [x] display places using address and radius
-- [x] support gps location
-- [ ] use correct place types for searching
-- [x] choose from one of the bathrooms as destination
-- [ ] choose transportation method
-- [x] get directions
-- [ ] address autocomplete
 
 ## Notes
 
