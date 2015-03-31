@@ -60,9 +60,9 @@ Open your web browser, type in address `localhost:3000`
 
 Now you have our project running!
 
-## Database Configuration
+## Database Installation
 
-`npm install` to make sure we have mongodb installed
+`npm install` to make sure you have mongodb installed.
 
 Create a new directory `/data` for MogoDB data path:
 
@@ -80,7 +80,7 @@ You should see the mongod process start up and something like:
 
 Now open up a new terminal, go to the project folder, run node server and you'll see `Connected correctly to server`.
 
-[Documentation](https://github.com/mongodb/node-mongodb-native) on MongoDB Node.js Driver
+[Documentation](https://github.com/mongodb/node-mongodb-native)
 
 ## Notes
 
