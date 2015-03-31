@@ -17,7 +17,7 @@
 - [ ] start address autocomplete
 - [ ] create a signup page (username, password, gender, address, etc.)
 - [ ] create a login page (Desmond)
-- [ ] MongoDB (Desmond)
+- [x] MongoDB (Desmond)
 - [ ] store user information in database (Desmond)
 
 #### Later
@@ -59,6 +59,28 @@ Express server listening on port 3000 in development mode
 Open your web browser, type in address `localhost:3000`
 
 Now you have our project running!
+
+## Database Configuration
+
+`npm install` to make sure we have mongodb installed
+
+Create a new directory `/data` for MogoDB data path:
+
+`cd`
+
+`sudo mkdir /data`
+
+Boot up a MongoDB server:
+
+`sudo mongod --dbpath=/data --port 27017`
+
+You should see the mongod process start up and something like:
+
+`Tue Mar 31 10:36:10.976 [initandlisten] waiting for connections on port 27017`
+
+Now open up a new terminal, go to the project folder, run node server and you'll see `Connected correctly to server`.
+
+[Documentation](https://github.com/mongodb/node-mongodb-native) on MongoDB Node.js Driver
 
 ## Notes
 
