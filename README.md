@@ -12,7 +12,7 @@
 - [x] get directions
 
 #### Current
-- [ ] choose miles or kilometers for radius
+- [ ] choose miles or kilometers for radius（Jingjing Zhang)
 - [ ] choose transportation method
 - [ ] start address autocomplete
 - [ ] create a signup page (username, password, gender, address, etc.)
