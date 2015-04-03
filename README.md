@@ -13,9 +13,9 @@
 
 #### Current
 - [ ] choose miles or kilometers for radius（Jingjing Zhang)
-- [ ] choose transportation method
-- [ ] start address autocomplete
-- [ ] create a signup page (username, password, gender, address, etc.)
+- [ ] choose transportation method (Matthew)
+- [ ] start address autocomplete (Qifan)
+- [ ] create a signup page (username, password, gender, address, etc.) (Joanna)
 - [ ] create a login page (Desmond)
 - [x] MongoDB (Desmond)
 - [ ] store user information in database (Desmond)
