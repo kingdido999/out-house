@@ -62,9 +62,11 @@ Now you have our project running!
 
 ## Database Installation
 
-`npm install` to make sure you have mongodb installed.
+First, you need to install [mongodb](http://docs.mongodb.org/manual/installation/) for your OS.
 
-Create a new directory `/data` for MogoDB data path:
+`npm install`
+
+Create a new directory `/data` for MongoDB data path:
 
 `cd`
 
