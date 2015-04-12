@@ -70,17 +70,17 @@ Create a new directory `/data` for MongoDB data path:
 
 `cd`
 
-`sudo mkdir /data`
+`sudo mkdir -p /data/db`
+
+`sudo chown -R `id -u` /data/db`
 
 Boot up a MongoDB server:
 
-`sudo mongod --dbpath=/data --port 27017`
+`mongod`
 
 You should see the mongod process start up and something like:
 
 `Tue Mar 31 10:36:10.976 [initandlisten] waiting for connections on port 27017`
-
-Now open up a new terminal, go to the project folder, run node server and you'll see `Connected correctly to server`.
 
 [Documentation](https://github.com/mongodb/node-mongodb-native)
 
