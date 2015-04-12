@@ -98,13 +98,12 @@ Git is one of the most popular version control systems. [Here](https://try.githu
 
 The most basic Git workflow is like this (after you have cloned a repo on your machine):
 
-1. Make some modification.
-2. `git status` to check what've been changed
-3. `git add .` to stage all changes
-4. `git commit -m "your commit message"` to commit the change
-5. `git push origin master` to push your change to the master branch of a remote server called `origin`
-
-Use `git pull` to pull the latest code from the remote server.
+1. `git pull` to pull the latest code from the remote server
+2. Make some modification.
+3. `git status` to check what've been changed
+4. `git add .` to stage all changes
+5. `git commit -m "your commit message"` to commit the change
+6. `git push origin master` to push your change to the master branch of a remote server called `origin`
 
 If you want to (and you should!) learn more about Git, check them out:
 
