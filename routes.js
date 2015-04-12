@@ -17,5 +17,4 @@ module.exports = function (app) {
 
   // query page
   app.post('/query', query.search);
-
 };

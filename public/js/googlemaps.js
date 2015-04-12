@@ -11,7 +11,7 @@
  *
  * Circles:
  * https://developers.google.com/maps/documentation/javascript/examples/circle-simple
- * 
+ *
  * Text Directions:
  * https://developers.google.com/maps/documentation/javascript/examples/directions-panel
  */
@@ -21,7 +21,6 @@ var geocoder;
 var geoOrigin; // geocoded location for origin address
 var infowindow; // popup window for each marker
 var radiusCircle;
-// var API_KEY = 'AIzaSyBDbsT9AqrUebFtJSVXFHTA6JtX6viD8JE';
 
 
 function initialize() {
@@ -134,7 +133,7 @@ function getDirections() {
     var directionsService = new google.maps.DirectionsService();
 
     directionsDisplay.setMap(directionsMap);
-    
+
     clearDirectionsPanel();
     directionsDisplay.setPanel(document.getElementById('directions-panel'));
 
