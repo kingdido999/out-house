@@ -48,8 +48,6 @@ mongoose.connect('mongodb://localhost:27017/out-house');
 
 // Routes
 require('./routes')(app);
-// app.get('/', routes.index);
-// app.post('/query', query.search);
 
 app.listen(3000, function(){
     console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
