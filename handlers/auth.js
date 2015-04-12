@@ -25,12 +25,19 @@ module.exports = {
       res.render('login', { user : req.user });
   },
 
+  postLogin: function(req, res) {
+    passport.authenticate('local')(req, res, function() {
+      res.redirect('/');
+    });
+  },
+
   logout: function(req, res) {
       req.logout();
       res.redirect('/');
   },
 }
 
-exports.postLogin = passport.authenticate('local'), function(req, res) {
-    res.redirect('/');
-}
+// exports.postLogin = passport.authenticate('local'), function(req, res) {
+//   console.log(1);
+//     res.redirect('/');
+// }

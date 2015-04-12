@@ -16,7 +16,7 @@
 - [ ] choose transportation method (Matthew)
 - [ ] start address autocomplete (Qifan)
 - [ ] beautify all web pages (Joanna)
-- [ ] create a signup page and a login page (Desmond)
+- [x] create a signup page and a login page (Desmond)
 - [x] MongoDB (Desmond)
 - [ ] store user information in database (Desmond)
 

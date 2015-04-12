@@ -1,3 +1,6 @@
+var passport = require('passport');
+var Account = require('./models/account');
+
 var routes = require('./handlers');
 var auth = require('./handlers/auth');
 var query = require('./handlers/query');
