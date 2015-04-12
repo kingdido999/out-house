@@ -18,7 +18,7 @@
 - [ ] beautify all web pages (Joanna)
 - [x] create a signup page and a login page (Desmond)
 - [x] MongoDB (Desmond)
-- [ ] store user information in database (Desmond)
+- [x] store user information in database (Desmond)
 
 #### Later
 - [ ] allow logged-in user to rate the bathroom
@@ -62,11 +62,13 @@ Now you have our project running!
 
 ## Database Installation
 
-First, you need to install [mongodb](http://docs.mongodb.org/manual/installation/) for your OS.
+Make sure to install [mongodb](http://docs.mongodb.org/manual/installation/) for your OS.
+
+Install node packages:
 
 `npm install`
 
-Create a new directory `/data` for MongoDB data path:
+Create a data path for mongodb:
 
 `cd`
 
@@ -81,6 +83,10 @@ Boot up a MongoDB server:
 You should see the mongod process start up and something like:
 
 `Tue Mar 31 10:36:10.976 [initandlisten] waiting for connections on port 27017`
+
+Now, open up a new terminal and run the server again:
+
+`nodemon app.js`
 
 [Documentation](https://github.com/mongodb/node-mongodb-native)
 
