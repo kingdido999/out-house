@@ -8,7 +8,6 @@ module.exports = {
 
       // pass data to the view
       res.render('query', {
-          title: 'Out House',
           address: startAddress,
           radius: searchRadius
       });
