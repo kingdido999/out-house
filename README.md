@@ -12,11 +12,11 @@
 - [x] get directions
 
 #### Current
-- [ ] choose miles or kilometers for radius（Jingjing Zhang)
+- [ ] choose miles or kilometers for radius (Jingjing Zhang)
 - [ ] choose transportation method (Matthew)
 - [ ] start address autocomplete (Qifan)
-- [ ] create a signup page (username, password, gender, address, etc.) (Joanna)
-- [ ] create a login page (Desmond)
+- [ ] beautify all web pages (Joanna)
+- [ ] create a signup page and a login page (Desmond)
 - [x] MongoDB (Desmond)
 - [ ] store user information in database (Desmond)
 
