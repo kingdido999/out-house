@@ -4,8 +4,6 @@
  */
 
 var express = require('express');
-// var routes = require('./routes');
-// var query = require('./routes/query.js');
 var assert = require('assert');
 var mongoose = require('mongoose');
 var passport = require('passport');
