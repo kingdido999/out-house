@@ -1,6 +1,23 @@
+.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      a(class="navbar-brand" href="/")= title
+
+    if (!user)
+      ul(class="nav navbar-nav")
+        li
+          a(href="/login") Login
+        li
+          a(href="/register") Register
+
+    if (user)
+      ul(class="nav navbar-nav")
+        li
+          a(href="/logout") Logout
+      p(class="navbar-text navbar-right") Signed in as #{user.username}
+
+
 .container
-    h1
-        a(href='/')= title
 
     form(action='/query', method='post')
         .form-group.address
