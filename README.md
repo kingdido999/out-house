@@ -24,6 +24,36 @@
 - [ ] allow logged-in user to rate the bathroom
 - [ ] store bathroom ratings in database
 
+## Database Installation
+
+Make sure to install [mongodb](http://docs.mongodb.org/manual/installation/) for your OS.
+
+Install node packages:
+
+`npm install`
+
+Create a data path for mongodb (OSX and Linux):
+
+`cd`
+
+`sudo mkdir -p /data/db`
+
+`sudo chown -R `id -u` /data/db`
+
+Boot up a MongoDB server:
+
+`mongod`
+
+You should see the mongod process start up and something like:
+
+`Tue Mar 31 10:36:10.976 [initandlisten] waiting for connections on port 27017`
+
+Now, open up a new terminal and run the server again:
+
+`nodemon app.js`
+
+[Documentation](https://github.com/mongodb/node-mongodb-native)
+
 ## Installation
 
 First, make sure you have [git](http://git-scm.com/downloads) and [node](https://nodejs.org/) installed.
@@ -59,36 +89,6 @@ Express server listening on port 3000 in development mode
 Open your web browser, type in address `localhost:3000`
 
 Now you have our project running!
-
-## Database Installation
-
-Make sure to install [mongodb](http://docs.mongodb.org/manual/installation/) for your OS.
-
-Install node packages:
-
-`npm install`
-
-Create a data path for mongodb:
-
-`cd`
-
-`sudo mkdir -p /data/db`
-
-`sudo chown -R `id -u` /data/db`
-
-Boot up a MongoDB server:
-
-`mongod`
-
-You should see the mongod process start up and something like:
-
-`Tue Mar 31 10:36:10.976 [initandlisten] waiting for connections on port 27017`
-
-Now, open up a new terminal and run the server again:
-
-`nodemon app.js`
-
-[Documentation](https://github.com/mongodb/node-mongodb-native)
 
 ## Notes
 
