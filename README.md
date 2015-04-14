@@ -38,7 +38,7 @@ Create a data path for mongodb (OSX and Linux):
 
 `sudo mkdir -p /data/db`
 
-`sudo chown -R `id -u` /data/db`
+`sudo chown -R `` `id -u` `` /data/db`
 
 Boot up a MongoDB server:
 
