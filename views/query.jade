@@ -21,24 +21,28 @@
         a(href='/')= title
 
     .row
-        .col-md-4
+        .col-md-3
             label Origin
-        .col-md-4
+        .col-md-3
             label Destination
-        .col-md-4
+        .col-md-3
             label Radius
+        .col-md-3
+            label Transportation Method
 
     .row
-        .col-md-4
+        .col-md-3
             .search-param
                 #address= address
-        .col-md-4
+        .col-md-3
             .search-param
                 #destination N/A
-        .col-md-4
+        .col-md-3
             .search-param
                 #radius= radius
-
+        .col-md-3
+            .search-param
+                #method= method
     .row
         .map
             label Bathrooms

@@ -122,8 +122,9 @@ function createCircle(location, radius) {
 function getDirections() {
     var start = geoOrigin;
     var end = document.getElementById('destination').innerHTML;
-    var transportation = google.maps.TravelMode.WALKING;
-
+	var method = document.getElementById('method').innerHTML;
+    var transportation = google.maps.TravelMode[method];
+	
     // initialize direction services
     var directionsMap = new google.maps.Map(document.getElementById('map-directions'), {
         center: start,
