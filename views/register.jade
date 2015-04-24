@@ -24,9 +24,21 @@
     .form-group.username
       label Username
       input.form-control(type='text', name="username", required)
+    .form-group.email
+      label Email
+      input.form-control(type='email', name="email", required)
     .form-group.password
       label Password
       input.form-control(type='password', name="password", required)
+    .form-group.gender
+      label Gender
+      input(type="radio", name="gender", value="male")
+      | Male
+      input(type="radio", name="gender", value="female")
+      | Female
+    .form-group.age
+      label Age
+      input.form-control(type='number', name="age")
     button.btn.btn-primary(type='submit') Submit
 
   br
