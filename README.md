@@ -14,7 +14,7 @@
 #### Current
 - [ ] choose miles or kilometers for radius (Jingjing Zhang)
 - [ ] choose transportation method (Matthew)
-- [ ] start address autocomplete (Qifan)
+- [x] start address autocomplete (Qifan)
 - [ ] beautify all web pages (Joanna)
 - [x] create a signup page and a login page (Desmond)
 - [x] MongoDB (Desmond)
