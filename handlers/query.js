@@ -5,7 +5,7 @@ module.exports = {
     // get form data
     var startAddress = req.body.startAddress;
     var searchRadius = req.body.searchRadius;
-	  var transportMethod = req.body.transportMethod.toUpperCase();
+	  var transportMethod = req.body.transportMethod;
 
     // pass data to the view
     res.render('query', {

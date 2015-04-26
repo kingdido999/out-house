@@ -29,8 +29,13 @@
             label Search range
             input.form-control.search-radius(type='number', name='searchRadius', value='500', required)
         .form-group.method
-            label Transportation Method
-            input.form-control.transport-method(type='text', name='transportMethod', placeholder='walking, bicycling, transit, or driving', required)
+            <label for="Transportation Method">Select a Transportation Method</label>
+            <select name="transportMethod">
+            <option>Driving</option>
+            <option selected="selected">Walking</option>
+            <option>Bicycling</option>
+            <option>Transit</option>
+            </select>
         .form-group.submit
             input.form-control.btn.btn-primary.submit-button(type='submit', value='Search')
 

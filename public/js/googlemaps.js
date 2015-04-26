@@ -122,7 +122,7 @@ function createCircle(location, radius) {
 function getDirections(placeName) {
     var start = geoOrigin;
     var end = document.getElementById('destination').innerHTML;
-	  var method = document.getElementById('method').innerHTML;
+	  var method = document.getElementById('method').innerHTML.toUpperCase();
     var transportation = google.maps.TravelMode[method];
 
     // check if the user is logged in
