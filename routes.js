@@ -18,6 +18,7 @@ module.exports = function (app) {
 
   // query page
   app.post('/query', query.search);
+  app.post('/checkin', query.checkin);
 
   // profile page
   app.get('/profile', isLoggedIn, profile.getProfile);

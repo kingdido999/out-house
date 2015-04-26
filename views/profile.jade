@@ -13,8 +13,15 @@
 .container
 
   .user-info
+    h2 My Profile
     ul
       li Username: #{user.username}
       li Email: #{user.email}
       li Gender: #{user.gender}
       li Age: #{user.age}
+
+  .check-in
+    h2 Bathrooms I've been to
+    ul
+      each checkin in checkins
+        li= checkin.bathroom

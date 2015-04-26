@@ -23,26 +23,26 @@
         a(href='/')= title
 
     .row
-        .col-md-3
+        .col-sm-3
             label Origin
-        .col-md-3
+        .col-sm-3
             label Destination
-        .col-md-3
+        .col-sm-3
             label Radius
-        .col-md-3
+        .col-sm-3
             label Transportation Method
 
     .row
-        .col-md-3
+        .col-sm-3
             .search-param
                 #address= address
-        .col-md-3
+        .col-sm-3
             .search-param
                 #destination N/A
-        .col-md-3
+        .col-sm-3
             .search-param
                 #radius= radius
-        .col-md-3
+        .col-sm-3
             .search-param
                 #method= method
     .row
@@ -58,6 +58,15 @@
         .col-md-6
             .directions-panel
                 #directions-panel
+
+    if (user)
+      .row
+        #check-in
+          h2
+            #bathroom-name
+          form(action='/checkin', method='post', class='form-checkin')
+              input(type='hidden', name='bathroom', id='form-bathroom-name', value='')
+              input.btn.btn-info.btn-sm(type='submit', value='Check-In', class='btn-check-in')
 
 script(src="https://maps.googleapis.com/maps/api/js?libraries=places")
 script(src="/js/googlemaps.js")

@@ -87,7 +87,7 @@ function createMarker(place) {
             '<input type="button"' +
             'class="btn-set-destination btn btn-primary btn-xs"' +
             'value="Set as destination"' +
-            'onclick="getDirections()">' +
+            'onclick="getDirections(\'' + place.name + '\')">' +
             '</div>';
 
         var content = place.name + btnSetDestination;
@@ -119,12 +119,17 @@ function createCircle(location, radius) {
     circle = new google.maps.Circle(populationOptions);
 }
 
-function getDirections() {
+function getDirections(placeName) {
     var start = geoOrigin;
     var end = document.getElementById('destination').innerHTML;
-	var method = document.getElementById('method').innerHTML;
+	  var method = document.getElementById('method').innerHTML;
     var transportation = google.maps.TravelMode[method];
-	
+
+    // check if the user is logged in
+    if (document.getElementById('check-in') != null) {
+      showCheckInPanel(placeName);
+    }
+
     // initialize direction services
     var directionsMap = new google.maps.Map(document.getElementById('map-directions'), {
         center: start,
@@ -153,6 +158,12 @@ function getDirections() {
 
 function clearDirectionsPanel() {
     document.getElementById("directions-panel").innerHTML = "";
+}
+
+function showCheckInPanel(placeName) {
+  document.getElementById('bathroom-name').innerHTML = placeName;
+  document.getElementById('form-bathroom-name').value = placeName;
+  document.getElementById('check-in').style.display = "block";
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

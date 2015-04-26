@@ -19,9 +19,27 @@ a {
 }
 
 .directions-panel {
-	margin-top: 40px;
+	margin: 40px 0;
 }
 
 .set-destination {
 	margin-top: 5px;
+}
+
+#check-in {
+  display: none;
+  margin-bottom: 40px;
+}
+
+#check-in h2 {
+  display: inline;
+}
+
+#bathroom-name {
+  display: inline;
+}
+
+.form-checkin {
+  display: inline;
+  margin-left: 20px;
 }
