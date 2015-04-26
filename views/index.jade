@@ -30,12 +30,14 @@
             input.form-control.search-radius(type='number', name='searchRadius', value='500', required)
         .form-group.method
             <label for="Transportation Method">Select a Transportation Method</label>
-            <select name="transportMethod">
-            <option>Driving</option>
-            <option selected="selected">Walking</option>
-            <option>Bicycling</option>
-            <option>Transit</option>
-            </select>
+            input(type="radio", name="transportMethod", value="Walking", checked)
+            | Walking
+            input(type="radio", name="transportMethod", value="Driving")
+            | Driving
+            input(type="radio", name="transportMethod", value="Bicycling")
+            | Bicycling
+            input(type="radio", name="transportMethod", value="Transit")
+            | Transit
         .form-group.submit
             input.form-control.btn.btn-primary.submit-button(type='submit', value='Search')
 
