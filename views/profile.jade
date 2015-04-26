@@ -1,0 +1,20 @@
+.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      a(class="navbar-brand" href="/") Out House
+
+    ul(class="nav navbar-nav")
+      li(class="active")
+        a(href="/profile") Profile
+      li
+        a(href="/logout") Logout
+    p(class="navbar-text navbar-right") Signed in as #{user.username}
+
+.container
+
+  .user-info
+    ul
+      li Username: #{user.username}
+      li Email: #{user.email}
+      li Gender: #{user.gender}
+      li Age: #{user.age}

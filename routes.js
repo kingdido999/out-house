@@ -2,6 +2,7 @@
 var routes = require('./handlers');
 var auth = require('./handlers/auth');
 var query = require('./handlers/query');
+var profile = require('./handlers/profile');
 
 module.exports = function (app) {
 
@@ -17,4 +18,18 @@ module.exports = function (app) {
 
   // query page
   app.post('/query', query.search);
+
+  // profile page
+  app.get('/profile', isLoggedIn, profile.getProfile);
 };
+
+// route middleware to make sure user is logged in
+function isLoggedIn(req, res, next) {
+
+	// if user is authenticated in the session, carry on
+	if (req.isAuthenticated())
+		return next();
+
+	// if they aren't redirect them to the home page
+	res.redirect('/');
+}
