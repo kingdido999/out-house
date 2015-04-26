@@ -5,10 +5,7 @@ module.exports = {
       // get address and radius from form data
       var startAddress = req.body.startAddress;
       var searchRadius = req.body.searchRadius;
-	  var transportMethod = req.body.transportMethod.toUpperCase();
-	  if(transportMethod != 'DRIVING' && transportMethod != 'WALKING' && transportMethod != 'TRANSIT' && transportMethod != 'BICYCLING'){
-		transportMethod = 'WALKING';
-	}
+	  var transportMethod = req.body.transportMethod;
 
       // pass data to the view
       res.render('query', {
