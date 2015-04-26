@@ -24,7 +24,7 @@
     form(action='/query', method='post', id='query-form')
         .form-group.address
             label Find bathroom near
-            input.form-control.start-address(type='text', name='startAddress', placeholder='Enter address', required)
+            input.form-control.start-address(type='text', id='auto', name='startAddress', placeholder='Enter address', onFocus='geolocate()', required)
         .form-group.radius
             label Search range
             input.form-control.search-radius(type='number', name='searchRadius', value='500', required)
@@ -40,3 +40,5 @@
             input.form-control.btn.btn-primary.submit-button(type='submit', value='Search')
 
 script(src="/js/geolocation.js")
+script(src="/js/autocomplete.js")
+script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places")
