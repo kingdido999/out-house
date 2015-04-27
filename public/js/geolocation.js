@@ -4,7 +4,7 @@
  * https://developers.google.com/maps/documentation/javascript/examples/map-geolocation
  */
 
-function initialize() {
+function initializeGeolocation() {
     // Try HTML5 geolocation
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -33,5 +33,3 @@ function handleNoGeolocation(errorFlag) {
         alert('Error: Your browser doesn\'t support geolocation.');
     }
 }
-
-window.onload = initialize;

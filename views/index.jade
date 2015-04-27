@@ -21,10 +21,12 @@
 
 .container
 
-    form(action='/query', method='post', id='query-form')
+    form(action='/query', method='post', id='query-form', class="form-horizontal")
         .form-group.address
             label Find bathroom near
-            input.form-control.start-address(type='text', id='auto', name='startAddress', placeholder='Enter address', onFocus='geolocate()', required)
+            input.form-control.start-address(type='text', id='auto', name='startAddress', placeholder='Enter address', onFocus='initializeAutoComplete()', required)
+        .form-group
+            input.form-control(type='button', name='gps', class='btn btn-info' value='Use my location', onclick='initializeGeolocation()')
         .form-group.radius
             label Search range
             input.form-control.search-radius(type='number', name='searchRadius', value='500', required)
