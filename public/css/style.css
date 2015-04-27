@@ -10,6 +10,15 @@ a {
  * index.jade
  */
 
+ .logo {
+   margin: 0 0 20px 100px;
+ }
+
+ .logo img {
+   opacity: 0.87;
+   filter: alpha(opacity=80); /* For IE8 and earlier */
+ }
+
  .transport-method input[type=radio] {
    margin-left: 15px;
    margin-right: 2px;

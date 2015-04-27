@@ -11,16 +11,16 @@
     p(class="navbar-text navbar-right") Signed in as #{user.username}
 
 .container
+  .col-md-6.col-md-offset-3
+    .user-info
+      h2 My Profile
+        h4 Username: #{user.username}
+        h4 Email: #{user.email}
+        h4 Gender: #{user.gender}
+        h4 Age: #{user.age}
 
-  .user-info
-    h2 My Profile
-      h4 Username: #{user.username}
-      h4 Email: #{user.email}
-      h4 Gender: #{user.gender}
-      h4 Age: #{user.age}
-
-  .check-in
-    h2 Bathrooms I've been to
-    ul
-      each checkin in checkins
-        li= checkin.bathroom
+    .check-in
+      h2 Bathrooms I've been to
+      ul
+        each checkin in checkins
+          li= checkin.bathroom
