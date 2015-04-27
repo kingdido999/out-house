@@ -15,8 +15,8 @@ a {
  }
 
  .logo img {
-   opacity: 0.87;
-   filter: alpha(opacity=80); /* For IE8 and earlier */
+   opacity: 0.70;
+   filter: alpha(opacity=70); /* For IE8 and earlier */
  }
 
  .transport-method input[type=radio] {

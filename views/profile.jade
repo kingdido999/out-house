@@ -14,13 +14,30 @@
   .col-md-6.col-md-offset-3
     .user-info
       h2 My Profile
-        h4 Username: #{user.username}
-        h4 Email: #{user.email}
-        h4 Gender: #{user.gender}
-        h4 Age: #{user.age}
+      .row
+        .col-md-3
+          h4 Username
+        .col-md-3
+          h5= user.username
+      .row
+        .col-md-3
+          h4 Email
+        .col-md-3
+          h5= user.email
+      .row
+        .col-md-3
+          h4 Gender
+        .col-md-3
+          h5= user.gender
+      .row
+        .col-md-3
+          h4 Age
+        .col-md-3
+          h5= user.age
 
-    .check-in
-      h2 Bathrooms I've been to
-      ul
-        each checkin in checkins
-          li= checkin.bathroom
+      .check-in
+        h2 Bathrooms I've been to
+        ul
+          each checkin in checkins
+            li
+              h4= checkin.bathroom
