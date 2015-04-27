@@ -23,7 +23,7 @@
   .col-md-6.col-md-offset-3
     .logo
       img(src='/img/Paper-Roll.png')
-      
+
     form(action='/query', method='post', id='query-form', class="form-horizontal")
         .form-group.address
             label Find bathroom near
@@ -31,7 +31,7 @@
         .form-group
             input.form-control(type='button', name='gps', class='btn btn-info' value='Use my location', onclick='initializeGeolocation()')
         .form-group.radius
-            label Search range
+            label Search range <small class='radius-unit'>(meter)</small>
             input.form-control.search-radius(type='number', name='searchRadius', value='500', min='1' required)
         .form-group.transport-method
             label Transportation Method

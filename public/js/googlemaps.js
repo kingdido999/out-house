@@ -64,6 +64,8 @@ function initialize() {
 
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
+        showMapTitle(results.length);
+
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
         }
@@ -125,6 +127,9 @@ function getDirections(placeName) {
 	  var method = document.getElementById('method').innerHTML.toUpperCase();
     var transportation = google.maps.TravelMode[method];
 
+    scrollToBottom();
+    showDirection(placeName);
+
     // check if the user is logged in
     if (document.getElementById('check-in') != null) {
       showCheckInPanel(placeName);
@@ -156,13 +161,27 @@ function getDirections(placeName) {
     });
 }
 
+function showMapTitle(num_results) {
+  document.getElementsByClassName('map-title')[0].style.visibility = 'visible';
+  document.getElementsByClassName('num_bathrooms')[0].innerHTML = num_results;
+}
+
+function showDirection(placeName) {
+  document.getElementsByClassName('direction')[0].style.visibility = 'visible';
+  document.getElementsByClassName('direction-dest')[0].innerHTML = placeName;
+}
+
+function scrollToBottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
 function clearDirectionsPanel() {
     document.getElementById("directions-panel").innerHTML = "";
 }
 
 function showCheckInPanel(placeName) {
   document.getElementById('form-bathroom-name').value = placeName;
-  document.getElementById('check-in').style.display = "block";
+  document.getElementById('check-in').style.visibility = 'visible';
 }
 
 function addslashes( str ) {
