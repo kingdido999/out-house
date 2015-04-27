@@ -7,6 +7,15 @@ a {
 }
 
 /*
+ * index.jade
+ */
+
+ .transport-method input[type=radio] {
+   margin-left: 15px;
+   margin-right: 2px;
+ }
+
+/*
  * query.jade
  */
 
