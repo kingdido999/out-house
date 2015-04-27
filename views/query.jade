@@ -1,5 +1,5 @@
 .navbar.navbar-default
-  .container-fluid
+  .container
     .navbar-header
       a(class="navbar-brand" href="/") Out House
 
@@ -22,30 +22,32 @@
     h1
         a(href='/')= title
 
-    .row
-        .col-sm-3
-            label Origin
-        .col-sm-3
-            label Destination
-        .col-sm-3
-            label Radius
-        .col-sm-3
-            label Transportation Method
+    .info
+      .row
+          .col-sm-3
+              label Origin
+          .col-sm-3
+              label Destination
+          .col-sm-3
+              label Radius
+          .col-sm-3
+              label Transportation Method
 
+      .row
+          .col-sm-3
+              .search-param
+                  #address= address
+          .col-sm-3
+              .search-param
+                  #destination N/A
+          .col-sm-3
+              .search-param
+                  #radius= radius
+          .col-sm-3
+              .search-param
+                  #method= method
     .row
-        .col-sm-3
-            .search-param
-                #address= address
-        .col-sm-3
-            .search-param
-                #destination N/A
-        .col-sm-3
-            .search-param
-                #radius= radius
-        .col-sm-3
-            .search-param
-                #method= method
-    .row
+      .col-md-12
         .map
             label Bathrooms
             #map-canvas
@@ -62,11 +64,10 @@
     if (user)
       .row
         #check-in
-          h2
-            #bathroom-name
           form(action='/checkin', method='post', class='form-checkin')
+            .form-group
               input(type='hidden', name='bathroom', id='form-bathroom-name', value='')
-              input.btn.btn-info.btn-sm(type='submit', value='Check-In', class='btn-check-in')
+              input.form-control(type='submit', value='Check-In', class='btn btn-primary btn-check-in')
 
 script(src="https://maps.googleapis.com/maps/api/js?libraries=places")
 script(src="/js/googlemaps.js")

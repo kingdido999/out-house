@@ -15,12 +15,26 @@ a {
    margin-right: 2px;
  }
 
+ /*
+  * register.jade
+  */
+
+  .gender input[type=radio] {
+    margin-left: 15px;
+    margin-right: 2px;
+  }
+
 /*
  * query.jade
  */
 
+ .info {
+   color: #777;
+   margin-bottom: 20px;
+ }
+
 .map {
-	margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 #map-canvas, #map-directions {
@@ -28,7 +42,7 @@ a {
 }
 
 .directions-panel {
-	margin: 40px 0;
+	margin-top: 25px;
 }
 
 .set-destination {

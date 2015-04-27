@@ -1,5 +1,5 @@
 .navbar.navbar-default
-  .container-fluid
+  .container
     .navbar-header
       a(class="navbar-brand" href="/") Out House
 
@@ -14,11 +14,10 @@
 
   .user-info
     h2 My Profile
-    ul
-      li Username: #{user.username}
-      li Email: #{user.email}
-      li Gender: #{user.gender}
-      li Age: #{user.age}
+      h4 Username: #{user.username}
+      h4 Email: #{user.email}
+      h4 Gender: #{user.gender}
+      h4 Age: #{user.age}
 
   .check-in
     h2 Bathrooms I've been to

@@ -1,5 +1,5 @@
 .navbar.navbar-default
-  .container-fluid
+  .container
     .navbar-header
       a(class="navbar-brand" href="/") Out House
 
@@ -10,13 +10,14 @@
         a(href="/register") Register
 
 .container
-  h1 Login
-  br
-  form(role='form', action="/login", method="post", id="login-form")
-    .form-group.username
-      label Username
-      input.form-control(type='text', name="username", required)
-    .form-group.password
-      label Password
-      input.form-control(type='password', name="password", required)
-    button.btn.btn-primary(type='submit') Submit
+  .col-md-6.col-md-offset-3
+    h1 Login
+
+    form(role='form', action="/login", method="post", id="login-form")
+      .form-group.username
+        label Username
+        input.form-control(type='text', name="username", required)
+      .form-group.password
+        label Password
+        input.form-control(type='password', name="password", required)
+      button.btn.btn-primary(type='submit') Submit

@@ -87,7 +87,7 @@ function createMarker(place) {
             '<input type="button"' +
             'class="btn-set-destination btn btn-primary btn-xs"' +
             'value="Set as destination"' +
-            'onclick="getDirections(\'' + place.name + '\')">' +
+            'onclick="getDirections(\'' + addslashes(place.name) + '\')">' +
             '</div>';
 
         var content = place.name + btnSetDestination;
@@ -161,9 +161,12 @@ function clearDirectionsPanel() {
 }
 
 function showCheckInPanel(placeName) {
-  document.getElementById('bathroom-name').innerHTML = placeName;
   document.getElementById('form-bathroom-name').value = placeName;
   document.getElementById('check-in').style.display = "block";
+}
+
+function addslashes( str ) {
+    return (str + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0');
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
