@@ -10,19 +10,16 @@
 - [x] use appropriate place types for searching
 - [x] choose from one of the bathrooms as destination
 - [x] get directions
-
-#### Current
-- [ ] choose miles or kilometers for radius (Jingjing Zhang)
-- [ ] choose transportation method (Matthew)
+- [x] choose transportation method (Matthew)
 - [x] start address autocomplete (Qifan)
-- [ ] beautify all web pages (Joanna)
+- [x] beautify all web pages (Joanna)
 - [x] create a signup page and a login page (Desmond)
 - [x] MongoDB (Desmond)
 - [x] store user information in database (Desmond)
+- [x] add checkin functionality
 
-#### Later
-- [ ] allow logged-in user to rate the bathroom
-- [ ] store bathroom ratings in database
+#### Current
+- [ ] choose miles or kilometers for radius (Jingjing Zhang)
 
 ## Database Installation
 
