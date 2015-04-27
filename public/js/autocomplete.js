@@ -6,7 +6,7 @@ function initializeAutoComplete() {
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {HTMLInputElement} */(document.getElementById('auto')),
       { types: ['geocode'] });
-  geolocate();
+  //geolocate();
 }
 
 function geolocate() {
