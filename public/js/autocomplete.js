@@ -1,3 +1,9 @@
+/*
+ * Modified based on the following examples:
+ * Place Autocomplete:
+ * https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+ */
+
 var autocomplete;
 
 function initializeAutoComplete() {
@@ -6,19 +12,4 @@ function initializeAutoComplete() {
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {HTMLInputElement} */(document.getElementById('auto')),
       { types: ['geocode'] });
-  //geolocate();
-}
-
-function geolocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = new google.maps.LatLng(
-          position.coords.latitude, position.coords.longitude);
-      var circle = new google.maps.Circle({
-        center: geolocation,
-        radius: position.coords.accuracy
-      });
-      autocomplete.setBounds(circle.getBounds());
-    });
-  }
 }

@@ -1,6 +1,9 @@
 {
   "name": "out-house",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "A bathroom finding web application",
+  "author": "Pengcheng Ding",
+  "contributors": ["Matthew Brennan", "Joanna Lee", "Qifan Huang", "Jingjing Zhang"],
   "private": true,
   "dependencies": {
     "express": "2.5.8",
@@ -10,5 +13,6 @@
     "passport": "^0.2.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^1.0.0"
-  }
+  },
+  "license": "MIT"
 }
