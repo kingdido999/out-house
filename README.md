@@ -18,9 +18,6 @@
 - [x] store user information in database (Desmond)
 - [x] add checkin functionality
 
-#### Current
-- [ ] choose miles or kilometers for radius (Jingjing Zhang)
-
 ## Database Installation
 
 Make sure to install [mongodb](http://docs.mongodb.org/manual/installation/) for your OS.
