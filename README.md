@@ -1,8 +1,11 @@
 # Out House
 
+A bathroom finding web application running on Node.js + MongoDB + AWS EC2.
+
+[Demo](http://52.11.163.188:3000/)
+
 ## Todo
 
-#### Finished
 - [x] form submit
 - [x] address geocoding
 - [x] display places using address and radius
