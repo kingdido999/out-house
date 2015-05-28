@@ -74,6 +74,9 @@ function callback(results, status) {
 
 function createMarker(place) {
     var placeLoc = place.geometry.location;
+    var latitude = placeLoc[Object.keys(placeLoc)[0]];
+    var longtitude = placeLoc[Object.keys(placeLoc)[1]];
+
     var marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location
@@ -81,7 +84,7 @@ function createMarker(place) {
 
     google.maps.event.addListener(marker, 'click', function() {
         // set #destination value
-        document.getElementById('destination').innerHTML = placeLoc.k + ',' + placeLoc.D;
+        document.getElementById('destination').innerHTML = latitude + ',' + longtitude;
 
         // button to set destination
         var btnSetDestination =
